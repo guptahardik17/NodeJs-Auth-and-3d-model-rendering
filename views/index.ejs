@@ -1,0 +1,77 @@
+<%- include header.ejs %>
+
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Righteous" rel="stylesheet">
+
+<style>
+  .slick-prev:before,
+  .slick-next:before {
+    font-family:initial!important;
+    color:white;
+    background:#2A2A2A;
+    padding-bottom:5px;
+    border-radius: 20px;
+  }
+  .image {
+    transition: 0.9s;
+  }
+  .image:hover {
+    -webkit-filter: grayscale(100%) blur(3px);
+    filter: grayscale(100%) blur(3px);
+  }
+</style>
+
+<div class="container">
+  <ul class="nav nav-list">
+    <li class="nav-header" style="font-family: 'Fredoka One', cursive;">Its time to create your own scapes, CHOOSE ONE !</li>
+  </ul>
+  <br/>
+
+  <% for(var i=0; i<all_data.categories.length; i++) {%>
+    <h1 style = "font-family: 'Righteous', cursive;letter-spacing: 3px;"><%- all_data.categories[i].name %></h1>
+    <div class="slider lazy">
+
+      <% for(var j=0; j<all_data.categories[i].models.length; j++) {%>
+        <form id="<%- all_data.categories[i].models[j].name %>" action="/render" method="get">
+          <div>
+            <div class="image" style="margin-right:10px">
+              <input type="hidden" name="name" value="<%- all_data.categories[i].models[j].name %>">
+              <a href="javascript: submitform('<%- all_data.categories[i].models[j].name %>')"><img data-lazy="<%- all_data.categories[i].models[j].thumb %>" /></a>
+              <p class="nav-header" style="font-family: 'Fredoka One', cursive;"><center><%- all_data.categories[i].models[j].name %></center></p>
+            </div>
+          </div>
+        </form>
+      <% } %>
+
+    </div>
+  <% } %>
+
+  <script type="text/javascript">
+    function submitform(formname)
+    {
+      document.forms[formname].submit();
+    }
+  </script>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+  $('.lazy').slick({
+    swipeToSlide:true,
+    infinite: true,
+    lazyLoad: 'ondemand',
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
+</script>
+
+<%- include footer.ejs %>

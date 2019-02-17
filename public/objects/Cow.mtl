@@ -1,0 +1,57 @@
+# Blender MTL File: 'Cow expanded.blend'
+# Material Count: 5
+
+newmtl Material.003
+Ns 66.666667
+Ka 1.000000 1.000000 1.000000
+Kd 0.804560 0.804560 0.804560
+Ks 0.076547 0.076547 0.076547
+Ke 0.200000 0.200000 0.200000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Blender stuff/Initial Cow/Cow expanded 2.png
+
+newmtl Material.004
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.192391 0.252899
+Ks 0.050489 0.050489 0.050489
+Ke 0.200000 0.048098 0.063225
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Blender stuff/Initial Cow/Cow expanded 2.png
+
+newmtl Material.005
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.168769 0.052449 0.004056
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Blender stuff/Initial Cow/Cow expanded 2.png
+
+newmtl Material.006
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.354596 0.354596 0.354596
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Blender stuff/Initial Cow/Cow expanded 2.png
+
+newmtl Material.007
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.497830 0.628120
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Blender stuff/Initial Cow/Cow expanded 2.png

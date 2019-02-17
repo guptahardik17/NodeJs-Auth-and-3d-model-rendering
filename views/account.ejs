@@ -1,0 +1,61 @@
+<%- include header.ejs %>
+
+<div class="container">
+  Account Settings
+  <br>
+  <h1><small>UPDATE ACCOUNT DETAILS</small></h1>
+
+  <form method="post" action="/accountupdate">
+    Name:
+    <input type="text" name="name" value="<%- user.name %>" style="margin-left:33px;margin-top:10px"/>
+    <input class="btn" type="submit" value="Update Name" style="margin-left:10px;width:150px;"/><br/>
+  </form>
+
+  <form method="post" action="/accountupdate">
+    Username:
+    <input type="text" name="username" value="<%- user.username %>" style="margin-left:7px;margin-top:10px"/>
+    <input class="btn" type="submit" value="Update Username" style="margin-left:10px;width:150px;"/><br/>
+  </form>
+
+  <form method="post" action="/accountupdate">
+    Email:
+    <input type="text" name="email" value="<%- user.email %>" style="margin-left:35px;margin-top:10px"/>
+    <input class="btn" type="submit" value="Update Email" style="margin-left:10px;width:150px;"/><br/>
+  </form>
+
+  <form method="post" action="/accountupdate">
+    Password:
+    <input type="text" name="password" value="<%- user.password %>" style="margin-left:10px;margin-top:10px"/>
+    <input class="btn" type="submit" value="Set Password" style="margin-left:10px;width:150px;"/><br/>
+  </form>
+
+  <br/>
+
+
+
+  <%if (user.googleid) { %>
+    <form method="post" action="/accountupdate">
+      <input type="hidden" name="id" value="<%- user.id %>">
+      <input class="btn btn-primary btn-large" type="submit" name="disconnectgoogle" value="Disconnect Google Account" style="width:300px;"/>
+    </form>
+  <% } else { %>
+    <form method="get" action="/auth/google">
+      <input type="hidden" name="id" value="<%- user.id %>">
+      <input class="btn" type="submit" value="Connect Google Account" style="width:300px;"/>
+    </form>
+  <% } %>
+    <%if (user.facebookid) { %>
+      <form method="post" action="/accountupdate">
+        <input type="hidden" name="id" value="<%- user.id %>">
+        <input class="btn btn-primary btn-large" type="submit" name="disconnectfacebook" value="Disconnect Facebook Account" style="width:300px;"/>
+      </form>
+    <% } else { %>
+      <form method="get" action="/auth/facebook">
+        <input type="hidden" name="id" value="<%- user.id %>">
+        <input class="btn" type="submit" value="Connect Facebook Account" style="width:300px;"/>
+      </form>
+    <% } %>
+
+</div>
+
+<%- include footer.ejs %>

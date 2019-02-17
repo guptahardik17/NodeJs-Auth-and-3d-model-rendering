@@ -1,0 +1,13 @@
+<%- include header.ejs %>
+<script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+
+<a-scene>
+  <a-obj-model src="objects/<%= name %>.obj" mtl="objects/<%= name %>.mtl" scale="0.2 0.2 0.2">
+    <a-animation attribute="rotation"
+      dur="10000"
+      to="0 360 0"
+      repeat="indefinite"
+      easing="linear" >
+    </a-animation>
+  </a-obj-model>
+</a-scene>
