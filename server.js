@@ -6,12 +6,6 @@ const session = require('express-session');
 const connection = require('./config/dbconn');
 
 
-connection.connect(function(err) {
-  if(!err) console.log("Connected DB!");
-  else console.log(err);
-});
-
-
 const app = express();
 
 // Passport Config
