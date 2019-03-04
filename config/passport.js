@@ -37,8 +37,8 @@ module.exports = function(passport) {
   ));
 
   passport.use('facebook', new FacebookStrategy({
-      clientID: '321625151797062',
-      clientSecret: 'd1ff2c5f4fbdb6af8c5ddc554540daf4',
+      clientID: 'ENTER YOUR FACEBOOK CLIENT ID',
+      clientSecret: 'ENTER YOUR FACEBOOK CLIENT SECRET',
       callbackURL: "http://localhost:3000/auth/facebook/callback",
       profileFields: ['emails','displayName']
     },
@@ -72,8 +72,8 @@ module.exports = function(passport) {
   ));
 
   passport.use('facebookupdate', new FacebookStrategy({
-    clientID: '321625151797062',
-    clientSecret: 'd1ff2c5f4fbdb6af8c5ddc554540daf4',
+    clientID: 'ENTER YOUR FACEBOOK CLIENT ID',
+    clientSecret: 'ENTER YOUR FACEBOOK CLIENT SECRET',
     callbackURL: "http://localhost:3000/auth/facebook/callback",
     passReqToCallback: true
     },
@@ -101,8 +101,8 @@ module.exports = function(passport) {
 
 
   passport.use('google', new GoogleStrategy({
-      clientID: '1073175744369-7eq1fsq2iael4ms4ugt91efhb8cjkhjj.apps.googleusercontent.com',
-      clientSecret: 'qN6Qwr_C88SJic_oVD8XwqhA',
+      clientID: 'ENTER YOUR GOOGLE CLIENT ID',
+      clientSecret: 'ENTER YOUR GOOGLE CLIENT SECRET',
       callbackURL: "/auth/google/callback",
       useNewUrlParser: true,
       passReqToCallback: true
@@ -141,8 +141,8 @@ module.exports = function(passport) {
 
 
   passport.use('googleupdate', new GoogleStrategy({
-      clientID: '1073175744369-7eq1fsq2iael4ms4ugt91efhb8cjkhjj.apps.googleusercontent.com',
-      clientSecret: 'qN6Qwr_C88SJic_oVD8XwqhA',
+      clientID: 'ENTER YOUR GOOGLE CLIENT ID',
+      clientSecret: 'ENTER YOUR GOOGLE CLIENT SECRET',
       callbackURL: "/auth/google/callback",
       useNewUrlParser: true,
       passReqToCallback: true
